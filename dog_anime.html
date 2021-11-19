@@ -38,9 +38,27 @@
       height: 30%;
       border-radius: 40% 40% 40% 40%;
       transform: rotate(30deg);
-      
+      animation-duration: 3s;
+      animation-name: left-wave;
+      animation-iteration-count: infinite;
+      /* transform-origin:0% 0%; */
+      /* animation-timing-function: linear; */
     }
-    
+
+    @keyframes left-wave {
+      10% {
+        transform: rotate(-30deg);
+      }
+      20% {
+        transform: rotate(30deg);
+      }
+      30% {
+        transform: rotate(-30deg);
+      }
+      40% {
+        transform: rotate(30deg);
+      }
+    }
     .dog-right-ear {
       position: absolute;
       top: 15%;
@@ -50,6 +68,26 @@
       height: 30%;
       border-radius: 40% 40% 40% 40%;
       transform: rotate(-30deg);
+      animation-duration: 3s;
+      animation-name: right-wave;
+      animation-iteration-count: infinite;
+      /* transform-origin:0% 0%; */
+      /* animation-timing-function: linear; */
+    }
+
+    @keyframes right-wave {
+      10% {
+        transform: rotate(30deg);
+      }
+      20% {
+        transform: rotate(-30deg);
+      }
+      30% {
+        transform: rotate(30deg);
+      }
+      40% {
+        transform: rotate(-30deg);
+      }
     }
     
     .dog-left-face {
@@ -145,17 +183,35 @@
       height: 7%;
       border-radius: 43% 74% 116% 116% / 74% 43% 138% 138%;
       background-color: rgb(145, 47, 9);
+      animation-duration: 3s;
+      animation-name: toungue;
+      animation-iteration-count: infinite;
+      /* transform-origin:0% 0%; */
+      /* animation-timing-function: linear; */
     }
-    
 
+    @keyframes toungue {
+      10% {
+        background-color: black;
+      }
+      20% {
+        background-color: rgb(145, 47, 9);
+      }
+      30% {
+        background-color: black;
+      }
+      40% {
+        background-color: rgb(145, 47, 9);
+      }
+    }
   </style>
 
   <title>Dog</title>
 
 </head>
+
 <body>
-
-
+  
   <div class="dog">
     <div class="dog-left-ear"></div>
     <div class="dog-right-ear"></div>
@@ -177,7 +233,8 @@
     <div class="dog-tongue"></div>
     
   </div>
-  <a href="dog_anime.html">CSS Dog with anime</a>
 
+  
 </body>
 </html>
+
