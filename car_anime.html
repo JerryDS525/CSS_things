@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .car{
+            position: absolute;
+            top: 30%;
+            height: 160px;
+            width: 100%;
+            /* border: 1px solid black; */
+            margin: auto;
+        }
+        .full-car{
+            position: absolute;
+            left: 0%;
+            height: 150px;
+            width: 270px;
+            border-bottom: 2px black solid;
+            animation-name: move-car;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+        /* @keyframes beforeCount{
+            for var i in (0..9)
+            {
+                {10% * i}
+                counter-increment (i * 10)
+            }
+        } */
+        @keyframes move-car {
+            0%{
+                left: 0%
+            }
+            5%{
+                left: 5%
+            }
+            10%{
+                left: 10%
+            }
+            15%{
+                left: 15%
+            }
+            20%{
+                left: 20%
+            }
+            25%{
+                left: 25%
+            }
+            30%{
+                left: 30%
+            }
+            40%{
+                left: 40%
+            }
+            50%{
+                left: 50%
+            }
+            60%{
+                left: 60%
+            }
+            70%{
+                left: 70%
+            }
+            80%{
+                left: 80%
+            }
+            90%{
+                left: 90%
+            }
+            100%{
+                left: 100%
+            }
+        }
+        .top-part{
+            position: absolute;
+            top: 10px;
+            left: 45px;
+            border-bottom: 50px solid gray;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            height: 0;
+            width: 125px;
+            
+        }
+        .top-part::before{
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: -3px;
+            border-bottom: 40px solid white;
+            border-left: 15px solid gray;
+            height: 0;
+            width: 50px;
+            background-color: white;
+        }
+        .top-part::after{
+            content: "";
+            position: absolute;
+            top: 5px;
+            right: -3px;
+            border-bottom: 40px solid white;
+            border-right: 15px solid gray;
+            height: 0;
+            width: 50px;
+            background-color: white;
+        }
+        
+        .bottom-part{
+            position: absolute;
+            top: 60px;
+            left: 10px;
+            height: 60px;
+            width: 250px;
+            background-color: gray;
+        }
+        .tyre{
+            position: absolute;
+            top: 95px;
+            left: 35px;
+            height: 50px;
+            width: 50px;
+            border-radius: 100%;
+            background-color: white;
+            border: 2px black solid;
+        }
+        
+    </style>
+    <title>Car</title>
+</head>
+<body>
+    <div class="car">
+        <div class="full-car">
+            <div class="top-part"></div>
+            <div class="bottom-part"></div>
+            <div class="tyre"></div>
+            <div class="tyre" style="left: 170px;"></div>
+        </div>
+    </div></body>
+</html>
